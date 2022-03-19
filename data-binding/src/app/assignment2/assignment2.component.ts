@@ -7,9 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Assignment2Component implements OnInit {
 
-  yourWord: string = "";
-  yourText: string = "";
-  yourShow: string = "";
+  yourWord: string = "";  // what the user types
+  yourText: string = "";  // where you store the user typing (no bidning for this!)
+  yourShow: string = "";  // what is shown depending if the user wants to show it or hide it
+  showSentence: string = "Show Sentence";
 
   constructor() { }
 
@@ -22,8 +23,13 @@ export class Assignment2Component implements OnInit {
   }
 
   onShowHideClick():void {
-    this.yourShow = this.yourText;
+    if (this.showSentence == "Show Sentence") {
+      this.showSentence = "Hide Sentence";
+      this.yourShow = this.yourText;
+    }
+    else {
+      this.showSentence = "Show Sentence";
+      this.yourShow = "";
+    }
   }
-
-
 }
