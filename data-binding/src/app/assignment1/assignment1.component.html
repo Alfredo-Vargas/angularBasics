@@ -1,0 +1,8 @@
+<label name="username">Type your username: </label>
+<input type="text" id="username" [(ngModel)]="yourName" >
+
+<p>Hi Mr. {{yourName}}</p>
+
+<p>
+  <button (click)="onClick()" [disabled]="empty()">clear</button>
+</p>
