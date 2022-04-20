@@ -1,2 +1,10 @@
 <h1>Assignment 1</h1>
+<button (click)="onClick($event)">show me the secret</button>
+<p *ngIf="buttonCondition">
+  Surprise!!!
+</p>
+<ul>
+  <li *ngFor="let clicks of clicksLog">{{clicks}}</li>
+  <li *ngIf="moreThanFourClicks()"></li>
+</ul>
 
