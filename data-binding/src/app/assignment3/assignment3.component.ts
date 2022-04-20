@@ -11,20 +11,20 @@ export class Assignment3Component implements OnInit {
   givenAuthor: string = "";
   givenGenre: string = "";
   givenImage: string = "";
-
-  genreOutput = window.document.getElementById("genre-output");
+  isSciFi: boolean = false;
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onTextEntry(event: Event): void {
-    // this.genreOutput = window.document.getElementById("genre-output");
-    if (this.givenGenre == "sciencefiction"){
-      // The line below does not work, why? <-- genreOtuput is NULL !!, but why?
-      // this.genreOutput.setAttribute("style", "color:red;");
-      this.genreOutput.classList.add("scifi");
+  onTitleEntry(event: Event): void {
+    if (this.givenTitle == "The Hunger Games" || this.givenTitle == "the hunger games") {
+      this.givenAuthor = "Suzzane Collins";
+      this.givenGenre = "sciefiction";
+      this.givenImage = "../../assets/TheHungerGames.jpg";
     }
+    // how to implement this most robust to any change?
+    this.isSciFi = this.givenGenre === "sciefiction" ? true : false;
   }
 }

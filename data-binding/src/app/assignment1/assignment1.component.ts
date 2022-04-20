@@ -9,6 +9,7 @@ export class Assignment1Component implements OnInit {
 
   yourName: string = "Hackerman";
 
+
   constructor() { }
 
   ngOnInit(): void {
