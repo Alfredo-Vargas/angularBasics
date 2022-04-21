@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { ClicksComponent } from './clicks/clicks.component';
 import { Assignment2Component } from './assignment2/assignment2.component';
 import { SmarttitlecasePipe } from './smarttitlecase.pipe';
+import { BooksComponent } from './books/books.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ClicksComponent,
     Assignment2Component,
-    SmarttitlecasePipe
+    SmarttitlecasePipe,
+    BooksComponent
   ],
   imports: [
     BrowserModule,

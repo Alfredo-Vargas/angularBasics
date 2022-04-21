@@ -1,0 +1,25 @@
+<h1>Assingment 3</h1>
+<div class="row" *ngFor="let book of bookArray">
+  <div class="col">
+    <img src={{book.img}} width=250 height=300 alt="book cover image">
+  </div>
+  <div class="col">
+    <h1>{{book.title}}</h1>
+    <p>{{book.releaseDate | date:'MMM, y'}}</p>
+    <p [ngClass]="{'sciencefiction': false, 'software': false}">{{book.genre}}</p>
+    <p>{{book.summary}}</p>
+    <p>{{book.price | currency:'EUR'}}</p>
+  </div>
+  <!-- <div class="col">
+    <div class="row">
+      <div class="col">
+        <img src={{givenImage}} width=500 height=600 alt="book cover image">
+      </div>
+      <div class="col">
+        <h1>{{givenTitle}}</h1>
+        <p>Writen by {{givenAuthor}}</p>
+        <div [class.scifi]="isSciFi" id="genre-output">{{givenGenre}}</div>
+      </div>
+    </div>
+  </div> -->
+</div>
