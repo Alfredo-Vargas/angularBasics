@@ -5,6 +5,6 @@
 </p>
 <ul>
   <li *ngFor="let clicks of clicksLog">{{clicks}}</li>
-  <li *ngIf="moreThanFourClicks()"></li>
+  <li class="haswhitetext" [ngStyle]="{backgroundColor : 'blue'}" *ngFor="let clicks of clicksLogBlue">{{clicks}}</li>
 </ul>
 

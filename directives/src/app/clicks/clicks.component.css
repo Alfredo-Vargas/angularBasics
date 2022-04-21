@@ -2,3 +2,7 @@ button {
   background-color: lightblue;
   height: 50px;
 }
+
+.haswhitetext {
+  color: white;
+}

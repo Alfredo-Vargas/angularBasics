@@ -5,11 +5,15 @@ import { FormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClicksComponent } from './clicks/clicks.component';
+import { Assignment2Component } from './assignment2/assignment2.component';
+import { SmarttitlecasePipe } from './smarttitlecase.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ClicksComponent
+    ClicksComponent,
+    Assignment2Component,
+    SmarttitlecasePipe
   ],
   imports: [
     BrowserModule,
