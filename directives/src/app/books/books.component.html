@@ -6,20 +6,9 @@
   <div class="col">
     <h1>{{book.title}}</h1>
     <p>{{book.releaseDate | date:'MMM, y'}}</p>
-    <p [ngClass]="{'sciencefiction': false, 'software': false}">{{book.genre}}</p>
-    <p>{{book.summary}}</p>
-    <p>{{book.price | currency:'EUR'}}</p>
+    <p [ngClass]="{'sciencefiction': isScifi(book.genre), 'software': isSoftware(book.genre), 'fantasy': isFantasy(book.genre)}">{{book.genre}}</p>
+    <p>{{book.summary | slice:0:100}}</p>
+    <p>{{book.price}}&euro;</p>
+    <!-- <p>{{book.price | currency:'EUR'}}</p> -->
   </div>
-  <!-- <div class="col">
-    <div class="row">
-      <div class="col">
-        <img src={{givenImage}} width=500 height=600 alt="book cover image">
-      </div>
-      <div class="col">
-        <h1>{{givenTitle}}</h1>
-        <p>Writen by {{givenAuthor}}</p>
-        <div [class.scifi]="isSciFi" id="genre-output">{{givenGenre}}</div>
-      </div>
-    </div>
-  </div> -->
 </div>

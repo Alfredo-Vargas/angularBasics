@@ -4,6 +4,5 @@
   Surprise!!!
 </p>
 <ul>
-  <li *ngFor="let clicks of clicksLog">{{clicks}}</li>
-  <li class="haswhitetext" [ngStyle]="{backgroundColor : 'blue'}" *ngFor="let clicks of clicksLogBlue">{{clicks}}</li>
+  <li *ngFor="let clicks of clicksLog;index as i" [ngStyle]="{backgroundColor : i > 3 ? 'blue' : 'white', color : i > 3 ? 'white' : 'black'}">{{clicks}}</li>
 </ul>

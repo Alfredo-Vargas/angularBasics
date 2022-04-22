@@ -1,0 +1,17 @@
+.software {
+  color: white;
+  background-color: blue;
+}
+
+.fantasy {
+  font-style: italic;
+}
+
+.sciencefiction {
+  color: white;
+  background-color: red;
+}
+
+.col {
+  margin: 10px;
+}

@@ -1,12 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../book.model';
 
+enum BookGenre {
+  Sciencefiction = 'sciencefiction',
+  Fantasy = 'fantasy',
+  Software = 'software'
+}
+
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
+
+  refBookGenre = BookGenre;
 
   bookArray: Array<Book> = [
   {
@@ -87,4 +95,15 @@ export class BooksComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isScifi(givenGenre: String): boolean {
+    return givenGenre == this.refBookGenre.Sciencefiction;
+  }
+
+  isFantasy(givenGenre: String): boolean {
+    return givenGenre == this.refBookGenre.Fantasy;
+  }
+
+  isSoftware(givenGenre: String): boolean {
+    return givenGenre == this.refBookGenre.Software;
+  }
 }
