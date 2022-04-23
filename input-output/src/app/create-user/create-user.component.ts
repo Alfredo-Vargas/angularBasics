@@ -9,10 +9,9 @@ import { User } from '../user.model';
 })
 export class CreateUserComponent implements OnInit {
 
-  // TODO: is better to initialize the variables using ngOnInit()?
   givenUser: User = new User();
 
-  @Output() userCredentials = new EventEmitter <User>();
+  @Output() createUserEvent = new EventEmitter <User>();
 
   constructor() { }
 
@@ -20,7 +19,7 @@ export class CreateUserComponent implements OnInit {
   }
 
   onCreateUser(): void {
-    this.userCredentials.emit(this.givenUser);
+    this.createUserEvent.emit(this.givenUser);
     this.givenUser.username = "";
     this.givenUser.password = "";
     console.log(this.givenUser.username);

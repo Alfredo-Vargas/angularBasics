@@ -9,15 +9,20 @@ import { User } from './user.model';
 export class AppComponent {
   title = 'input-output';
 
-  displayUser: User = new User();
-  listOfUsers: Array<User> = [];
+  tempUser: User = new User();
+  listOfUsers: Array<User> = [
+    {username: "Alfredo", password: "123"},
+    {username: "Tabitha", password: "456"},
+    {username: "Piazzola", password: "tango"}
+  ];
 
-  onCredentialsPassed(passedUser: User) {
-    this.displayUser.username=
+  onUserCreated(passedUser: User) {
+    this.tempUser.username=
       passedUser.username;
-    this.displayUser.password=
+    this.tempUser.password=
       passedUser.password;
-    this.listOfUsers.push(this.displayUser);
+    this.listOfUsers.push(this.tempUser);
+    // this.listOfUsers.push(passedUser);
     console.log(this.listOfUsers.length);
   }
 }

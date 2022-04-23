@@ -10,7 +10,6 @@ import { User } from '../user.model';
 export class DisplayUserComponent implements OnInit {
 
   @Input() displayUser: User = new User();
-  @Input() displayUserList: Array<User> = [];
 
   constructor() { }
 

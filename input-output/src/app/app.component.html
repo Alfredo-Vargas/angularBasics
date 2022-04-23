@@ -1,8 +1,10 @@
-<app-create-user (userCredentials) = "onCredentialsPassed($event)">
+<app-create-user (createUserEvent) = "onUserCreated($event)">
 </app-create-user>
 <app-display-user 
   *ngFor= "let user of listOfUsers"
-  [displayUser] = "user" [displayUserList] = "listOfUsers"
+  [displayUser] = "user"
 >
 </app-display-user>
+
+  <!-- [displayUser] = "user" [displayUserList] = "listOfUsers" -->
 
