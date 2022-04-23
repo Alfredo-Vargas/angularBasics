@@ -1,7 +1,8 @@
-<div>
-  <app-create-user></app-create-user>
-</div>
-<div>
-  <app-display-user></app-display-user>
-</div>
+<app-create-user (userCredentials) = "onCredentialsPassed($event)">
+</app-create-user>
+<app-display-user 
+  *ngFor= "let user of listOfUsers"
+  [displayUser] = "user" [displayUserList] = "listOfUsers"
+>
+</app-display-user>
 

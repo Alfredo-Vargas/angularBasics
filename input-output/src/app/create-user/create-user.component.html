@@ -2,15 +2,17 @@
   <div class="form-group">
     <label for="usern" class="control-label col-sm-2">username: </label>
     <div class="col-sm-10">
-      <input [(ngModel)]="givenUsername" type="username" class="form-control" id="user" placeholder="Enter username">
+<!--Why it is required name attribute below?-->
+      <input [(ngModel)]="givenUser.username" name="username" type="username" class="form-control" id="user" placeholder="Enter username">
     </div>
   </div>
   <div class="form-group">
     <label for="pwd" class="control-label col-sm-2">Password: </label>
     <div class="col-sm-10">
-      <input [(ngModel)]="givenPassword" type="password" class="form-control" id="pwd" placeholder="Enter password">
+<!--Why it is required name attribute below?-->
+      <input [(ngModel)]="givenUser.password" name="password" type="password" class="form-control" id="pwd" placeholder="Enter password">
     </div>
   </div>
 </form>
-<button (click)="onCreateUser($event)">Create</button>
+<button (click)="onCreateUser()">Create</button>
 

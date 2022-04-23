@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { EventEmitter, Output } from '@angular/core';
+import { User } from '../user.model';
 
 @Component({
   selector: 'app-create-user',
@@ -8,22 +9,20 @@ import { EventEmitter, Output } from '@angular/core';
 })
 export class CreateUserComponent implements OnInit {
 
-  givenUsername: String = "";
-  givenPassword: String = "";
+  // TODO: is better to initialize the variables using ngOnInit()?
+  givenUser: User = new User();
 
-  @Output() usernameMessage = new EventEmitter<String>();
-  @Output() passwordMessage = new EventEmitter<String>();
+  @Output() userCredentials = new EventEmitter <User>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  onCreateUser(event: Event): void {
-    this.usernameMessage.emit(this.givenUsername);
-    this.passwordMessage.emit(this.givenPassword);
-    givenUsername = "";
-    givenPassword = "";
-
+  onCreateUser(): void {
+    this.userCredentials.emit(this.givenUser);
+    this.givenUser.username = "";
+    this.givenUser.password = "";
+    console.log(this.givenUser.username);
   }
 }

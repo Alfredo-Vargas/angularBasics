@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
+import { User } from '../user.model';
 
 @Component({
   selector: 'app-display-user',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DisplayUserComponent implements OnInit {
 
+  @Input() displayUser: User = new User();
+  @Input() displayUserList: Array<User> = [];
+
   constructor() { }
 
   ngOnInit(): void {
+    console.log(this.displayUser);
   }
 
+  onDeleteUser(){
+
+  }
 }
