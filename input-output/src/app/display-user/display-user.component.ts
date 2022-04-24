@@ -10,6 +10,7 @@ import { User } from '../user.model';
 export class DisplayUserComponent implements OnInit {
 
   @Input() displayUser: User = new User();
+  @Input() displayUserList: Array<User> = [];
 
   constructor() { }
 
@@ -17,7 +18,14 @@ export class DisplayUserComponent implements OnInit {
     console.log(this.displayUser);
   }
 
-  onDeleteUser(){
+  onDeleteUser(u: User): void {
+    this.removeElementFromUserArray(u);
+    // this.displayUserList.forEach(element => console.log(element));
+  }
 
+  removeElementFromUserArray(element: User): void {
+    this.displayUserList.forEach((value,index) => {
+        if(value==element) this.displayUserList.splice(index,1);
+    });
   }
 }
