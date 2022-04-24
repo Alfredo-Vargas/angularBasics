@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { EventEmitter, Output } from '@angular/core';
 import { User } from '../user.model';
+// Import for assignment2 and assignment3
+import { ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-create-user',
@@ -8,6 +10,9 @@ import { User } from '../user.model';
   styleUrls: ['./create-user.component.css']
 })
 export class CreateUserComponent implements OnInit {
+
+  @ViewChild('NewUserName') myHtmlUser!: ElementRef;
+  @ViewChild('NewPassword') myHtmlPass!: ElementRef;
 
   givenUser: User = new User();
 
@@ -18,10 +23,18 @@ export class CreateUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // for Assingment 2 function needs two arguments
+  // onCreateUser(uname: string, pass: string): void {
   onCreateUser(): void {
+    this.givenUser.username = this.myHtmlUser.nativeElement.value;
+    this.givenUser.password = this.myHtmlPass.nativeElement.value;
+    //Assginment2
+    // this.givenUser.username = uname;
+    // this.givenUser.password = pass;
     this.createUserEvent.emit(this.givenUser);
-    this.givenUser.username = "";
-    this.givenUser.password = "";
+    // Assignment2 asks to skip the clearing of the fields
+    // this.givenUser.username = "";
+    // this.givenUser.password = "";
     console.log(this.givenUser.username);
   }
 }

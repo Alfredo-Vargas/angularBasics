@@ -9,6 +9,8 @@ import { User } from './user.model';
 export class AppComponent {
   title = 'input-output';
 
+  name: String = "";
+
   // tempUser: User = new User();
   listOfUsers: Array<User> = [];
   /* = [
