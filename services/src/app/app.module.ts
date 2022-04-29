@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { UpdateTitleComponent } from './update-title/update-title.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { DisplayUsersComponent } from './display-users/display-users.component';
+import { LocationComponent } from './location/location.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UpdateTitleComponent,
     CreateUserComponent,
-    DisplayUsersComponent
+    DisplayUsersComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,
