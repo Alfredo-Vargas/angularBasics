@@ -8,6 +8,8 @@ import { UpdateTitleComponent } from './update-title/update-title.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { DisplayUsersComponent } from './display-users/display-users.component';
 import { LocationComponent } from './location/location.component';
+import { CreateBookComponent } from './create-book/create-book.component';
+import { DisplayBooksComponent } from './display-books/display-books.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { LocationComponent } from './location/location.component';
     UpdateTitleComponent,
     CreateUserComponent,
     DisplayUsersComponent,
-    LocationComponent
+    LocationComponent,
+    CreateBookComponent,
+    DisplayBooksComponent
   ],
   imports: [
     BrowserModule,

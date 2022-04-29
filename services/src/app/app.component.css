@@ -1,0 +1,10 @@
+.container {
+  display: flex;
+  justify-content:space-between;
+  margin: 20%;
+}
+
+.inline {
+  display: inline;
+}
+

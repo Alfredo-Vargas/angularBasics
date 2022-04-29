@@ -83,11 +83,11 @@ export class BookService {
   constructor() { }
 
   getBooks(): Array<Book> {
-    return bookArray;
+    return this.bookArray;
   }
 
-  addBook( newBook: Book ): Void {
-    tempBook = new Book();
+  addBook( newBook: Book ): void {
+    let tempBook = new Book();
     tempBook.title = newBook.title;
     tempBook.author = newBook.author;
     tempBook.genre = newBook.genre;
@@ -95,6 +95,6 @@ export class BookService {
     tempBook.price = newBook.price;
     tempBook.summary = newBook.summary;
     tempBook.releaseDate = newBook.releaseDate;
-    bookArray.push(tempBook);
+    this.bookArray.unshift(tempBook);
   }
 }

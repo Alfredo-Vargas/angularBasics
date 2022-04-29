@@ -20,7 +20,7 @@ export class UserService {
   }
 
   addUser(user: User): void {
-    this.user.push(user);
+    this.users.push(user);
     console.log('addUser results in:', this.users);
   }
 }
