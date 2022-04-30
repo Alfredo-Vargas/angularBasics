@@ -1,1 +1,12 @@
-<p>create-book works!</p>
+<label class="form group row" for="titleid">Book Title</label>
+<input type="text" id="titleid" [(ngModel)]="newBook.title">
+<label class="form group row" for="groupid">General information</label>
+<input class="form group row" [(ngModel)]="newBook.author" type="text" id="groupid" placeholder="Author">
+<input class="form group row" [(ngModel)]="newBook.genre" type="text" id="groupid" placeholder="Genre">
+<input class="form group row" [(ngModel)]="newBook.img" type="text" id="groupid" placeholder="Image">
+<textarea class="form group row" [(ngModel)]="newBook.summary" name="text" id="groupid" placeholder="Summary" wrap="soft"></textarea>
+<label class="form group row" for="dateid">Release Date</label>
+<input class="form group row" [(ngModel)]="newBook.releaseDate" type="date" id="dateid">
+<label class="form group row" for="priceid">Price</label>
+<input class="form group row" [(ngModel)]="newBook.price" type="number" id="priceid" placeholder="0" min=0 step=0.01>
+<button (click)="onCreateBook()">Create</button>

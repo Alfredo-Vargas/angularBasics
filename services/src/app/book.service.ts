@@ -11,7 +11,7 @@ export class BookService {
     title: 'The maze runner',
     author: 'James Dashner',
     genre: 'sciencefiction',
-    img: '../../assets/TheMazeRunner.jpg',
+    img: '../assets/TheMazeRunner.jpg',
     price: 9.69,
     summary: `A group of teenagers, who call themselves the "Gladers" are left in a strange place which they call the "Glade".
               The Glade is surrounded by four doors, leading to the Maze, that close every night at sundown and open in the morning.
@@ -33,7 +33,7 @@ export class BookService {
     title: 'The hunger games',
     author: 'Suzanne Collins',
     genre: 'sciencefiction',
-    img: '../../assets/TheHungerGames.jpg',
+    img: '../assets/TheHungerGames.jpg',
     price: 7.99,
     summary: `The first book in the ground-breaking Hunger Games trilogy. Set in a dark vision of the near future, a terrifying reality TV show is taking place.
               Twelve boys and twelve girls are forced to appear in a live event called The Hunger Games. There is only one rule: kill or be killed. When sixteen-year-old
@@ -46,7 +46,7 @@ export class BookService {
     title: 'Harry Potter and the Order of the Phoenix',
     author: 'J.K.Rowling',
     genre: 'fantasy',
-    img: '../../assets/HarryPotterPhoenix.jpg',
+    img: '../assets/HarryPotterPhoenix.jpg',
     price: 8.39,
     summary: `Dark times have come to Hogwarts. After the Dementors attack on his cousin Dudley, Harry Potter knows
               that Voldemort will stop at nothing to find him. there are many who deny the Dark Lords return, but Harry
@@ -59,7 +59,7 @@ export class BookService {
     title: 'ng-book: The complete book on Angular',
     author: 'Nate Murray, Felipe Coury, Ari Lerner, Carlos Taborda',
     genre: 'software',
-    img: '../../assets/ng-book.jpg',
+    img: '../assets/ng-book.jpg',
     price: 50,
     summary: `ng-book is an e-book designed to teach you step-by-step how to create serious Angular apps: from empty-folder to deployment. Each chapter covers a topic and we provide
               full code examples for every project in the book.`,
@@ -69,7 +69,7 @@ export class BookService {
     title: 'Don\'t Make Me Think, Revisited',
     author: 'Steve Krug',
     genre: 'software',
-    img: '../../assets/DontMakeMeThink.jpg',
+    img: '../assets/DontMakeMeThink.jpg',
     price: 29.99,
     summary: `Steve returns with fresh perspective to reexamine the principles that made Dont Make Me Think a
               classic-with updated examples and a new chapter on mobile usability. And its still short, profusely

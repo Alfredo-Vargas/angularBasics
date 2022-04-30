@@ -1,7 +1,7 @@
 <app-create-user (createUserEvent) = "onUserCreated($event)">
 </app-create-user>
 <app-display-user 
-  *ngFor= "let user of listOfUsers; index as i;"
+  *ngFor="let user of listOfUsers; index as i;"
   [displayUser] = "listOfUsers[i]" [displayUserList] = "listOfUsers"
 >
 </app-display-user>

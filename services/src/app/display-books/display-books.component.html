@@ -1,40 +1,12 @@
-<div class="row">
-  <div class="col">
-      <div class="form-group row">
-        <label for="title" class="col-sm-2 col-form-label">Title</label>
-        <div class="col-sm-10">
-          <input type="text" id="title" [(ngModel)]="givenTitle" class="form-control" (input)="onTitleEntry($event)">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="author" class="col-sm-2 col-form-label">Author</label>
-        <div class="col-sm-10">
-          <input type="text" id="author" [(ngModel)]="givenAuthor" class="form-control">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="genre" class="col-sm-2 col-form-label">Genre</label>
-        <div class="col-sm-10">
-          <input type="text" id="genre" [(ngModel)]="givenGenre" class="form-control">
-        </div>
-      </div>
-      <div class="form-group row">
-        <label for="image" class="col-sm-2 col-form-label">Img</label>
-        <div class="col-sm-10">
-          <input type="text" id="image" [(ngModel)]="givenImage" class="form-control">
-        </div>
-      </div>
+<div *ngFor="let book of books">
+  <div>
+    <img src={{book.img}} width=250 height=300 alt="book cover image">
   </div>
-  <div class="col">
-    <div class="row">
-      <div class="col">
-        <img src={{givenImage}} width=500 height=600 alt="book cover image">
-      </div>
-      <div class="col">
-        <h1>{{givenTitle}}</h1>
-        <p>Writen by {{givenAuthor}}</p>
-        <div [class.scifi]="isSciFi" id="genre-output">{{givenGenre}}</div>
-      </div>
-    </div>
+  <div>
+    <h1>{{book.title}}</h1>
+    <p>{{book.releaseDate | date:'MMM, y'}}</p>
+    <p>{{book.genre}}</p>
+    <p>{{book.summary | slice:0:100}}</p>
+    <p>{{book.price}}&euro;</p>
   </div>
 </div>

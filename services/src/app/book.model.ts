@@ -2,7 +2,7 @@ export class Book {
   title: String;
   author: String;
   genre: String;
-  img: String;
+  img: string;
   price: Number;
   summary: String;
   releaseDate: Date;
