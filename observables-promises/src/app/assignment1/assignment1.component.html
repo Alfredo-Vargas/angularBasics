@@ -1,0 +1,4 @@
+<div *ngFor="let user of users">
+    <p *ngIf="isPromiseValid()">{{user.name}}, {{user.age}}</p>
+</div>
+    <p *ngIf="!isPromiseValid()">The userdata is invalid</p>
