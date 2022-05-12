@@ -8,5 +8,6 @@
   <p>{{book.genre}}</p>
   <p>{{book.summary|summary:100}}</p>
   <p [innerHTML]="book.price|euro"></p>
+  <button type="submit" class="btn btn-light" (click)="onNextBook()">Next book</button>
 </div>
 

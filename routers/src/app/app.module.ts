@@ -14,10 +14,11 @@ import { SummaryPipe } from './summary.pipe';
 // Added below manually
 import { RouterModule, Routes } from '@angular/router';
 
+// Added Routes
 const routes: Routes = [
   {path: '', component:HomeComponent},
-  {path: '', component:HomeComponent},
-
+  {path: 'books', component:BooksComponent},
+  {path: 'books/:id', component:BookComponent}
 ];
 
 @NgModule({
