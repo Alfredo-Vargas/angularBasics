@@ -6,7 +6,7 @@ import { Book } from '../book.model';
 })export class BooksService {
   private books = [
   {
-    id: 5,
+    id: 1,
     title: 'The maze runner',
     author: 'James Dashner',
     genre: 'sciencefiction',
@@ -29,7 +29,7 @@ import { Book } from '../book.model';
     releaseDate: new Date('2009-10-16')
   },
   {
-    id: 4,
+    id: 2,
     title: 'The hunger games',
     author: 'Suzanne Collins',
     genre: 'sciencefiction',
@@ -57,7 +57,7 @@ import { Book } from '../book.model';
     releaseDate: new Date('2014-09-01')
   },
   {
-    id: 2,
+    id: 4,
     title: 'ng-book: The complete book on Angular',
     author: 'Nate Murray, Felipe Coury, Ari Lerner, Carlos Taborda',
     genre: 'software',
@@ -68,7 +68,7 @@ import { Book } from '../book.model';
     releaseDate: new Date('2021-02-01')
   },
   {
-    id: 1,
+    id: 5,
     title: 'Don\'t Make Me Think, Revisited',
     author: 'Steve Krug',
     genre: 'software',

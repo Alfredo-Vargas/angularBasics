@@ -10,7 +10,7 @@ export class Book {
   releaseDate: Date;
 
   constructor() {
-    this.id = 0;
+    this.id = 1;
     this.title = '';
     this.author = '';
     this.genre = '';

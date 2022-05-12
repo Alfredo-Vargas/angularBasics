@@ -11,32 +11,41 @@ import { Book } from 'src/app/book.model';
 })
 export class BookComponent implements OnInit {
   book: Book;
+  nextId: number = 0;
 
   // added route
   constructor(private booksService: BooksService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit(): void {
-    // added bookId and casting string to int using +bookId. Uses ('+' in front)
+    this.book = this.booksService.getBook(1);
+/*
+    // USING SNAPSHOTS
     const bookId = this.route.snapshot.params.id;
-    if (bookId == null) {
-      this.book = this.booksService.getBook(1);
-    }
-    else {
-      this.book = this.booksService.getBook(+bookId);
-    }
+    this.book = this.booksService.getBook(+bookId);
+*/
+
+    // USING OBSERVABLES
+    this.route.paramMap.subscribe((params: Params)=> {
+      this.book = this.booksService.getBook(+params.get('id'));
+    });
+
   }
 
   getsrc(book: Book): string {
-    return '../../assets/' + book.img;
+    return '../../../assets/' + book.img;
   }
 
   onNextBook(): void {
-    let bookId = this.route.snapshot.params.id;
-    let nextId: number;
+    this.router.navigate(['books']);
+    // let bookId = this.route.snapshot.params.id;
+    // console.log(bookId);
 
-    nextId = +bookId == this.booksService.getBooks().length ? 1 : +bookId + 1;
-    this.book = this.booksService.getBook(nextId);
+    console.log(this.book.id);
+    this.nextId = +this.book.id == this.booksService.getBooks().length ? 1 : +this.book.id + 1;
+    console.log(this.nextId);
+    this.book = this.booksService.getBook(this.nextId);
   }
 
 }
