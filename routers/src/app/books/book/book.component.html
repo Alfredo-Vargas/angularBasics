@@ -1,0 +1,12 @@
+<div class="clearfix">
+  <img [src]="getsrc(book)" [alt]="book.title" />
+  <h2>{{book.title|titlecase}}</h2>
+  <p>
+    {{book.author}}<br/>
+    {{book.releaseDate|date:'MMM, YYYY'}}
+  </p>
+  <p>{{book.genre}}</p>
+  <p>{{book.summary|summary:100}}</p>
+  <p [innerHTML]="book.price|euro"></p>
+</div>
+

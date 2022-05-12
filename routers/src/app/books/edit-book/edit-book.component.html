@@ -1,0 +1,23 @@
+  <div class="form-group">
+    <div class="form-group">
+      <label for="title">Book Title</label>
+      <input type="text" class="form-control" [(ngModel)]="book.title" name="title" id="title">
+    </div>
+    <div class="form-group">
+      <label for="author">General information</label>
+      <input type="text" class="form-control" [(ngModel)]="book.author" name="author" id="author" placeholder="Author">
+      <input type="text" class="form-control" [(ngModel)]="book.genre" name="genre" id="genre" placeholder="Genre">
+      <input type="text" class="form-control" [(ngModel)]="book.img" name="img" id="img" placeholder="Image">
+      <textarea class="form-control" [(ngModel)]="book.summary" name="summary" id="summary" placeholder="Summary"> </textarea>
+    </div>
+    <div class="form-group">
+      <label for="releaseDate">Release Date</label>
+      <input type="date" class="form-control" [(ngModel)]="releaseDate" name="releaseDate" id="releaseDate" placeholder="Release date">
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" [(ngModel)]="book.price" name="price" id="price" placeholder="Price">
+    </div>
+    <button type="submit" class="btn btn-light" (click)="onUpdateBook()">Update book</button>
+  </div>
+

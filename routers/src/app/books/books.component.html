@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <div class="list-group">
+      <a
+        routerLink="{{book.id}}"
+        class="list-group-item"
+        *ngFor="let book of books">
+        {{ book.title }}
+      </a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <app-book></app-book>
+    <hr />
+    <app-edit-book></app-edit-book>
+    <hr />
+    <app-create-book></app-create-book>
+</div>
+
