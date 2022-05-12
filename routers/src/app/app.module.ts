@@ -11,6 +11,14 @@ import { BooksService } from './books/books.service';
 import { CreateBookComponent } from './books/create-book/create-book.component';
 import { EuroPipe } from './euro.pipe';
 import { SummaryPipe } from './summary.pipe';
+// Added below manually
+import { RouterModule, Routes } from '@angular/router';
+
+const routes: Routes = [
+  {path: '', component:HomeComponent},
+  {path: '', component:HomeComponent},
+
+];
 
 @NgModule({
   declarations: [
@@ -25,7 +33,8 @@ import { SummaryPipe } from './summary.pipe';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)  // Added here manually
   ],
   providers: [BooksService],
   bootstrap: [AppComponent]
