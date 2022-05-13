@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/book.model';
 import { BooksService } from '../books.service';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 
 
 @Component({
@@ -12,10 +13,17 @@ export class CreateBookComponent implements OnInit {
 
   book: Book;
 
-  constructor(private bookService: BooksService) { }
+  constructor(private booksService: BooksService,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.book = new Book();
+    console.log("ngOnInit create-book was called");
+
+    this.route.paramMap.subscribe((params: Params)=> {
+      this.book = this.booksService.getBook(+params.get('id'));
+    });
+
   }
 
   set releaseDate(e: any) {
@@ -30,7 +38,7 @@ export class CreateBookComponent implements OnInit {
 
   onClick(): void {
     console.log('creating book: ', this.book);
-    this.bookService.addBook(this.book);
+    this.booksService.addBook(this.book);
     this.book = {
       id: 0,
       title: '',

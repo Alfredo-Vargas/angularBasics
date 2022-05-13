@@ -19,8 +19,10 @@ const routes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'books', component:BooksComponent, children: [
     {path: ':id', component:BookComponent},
-    {path: ':id/edit', component:EditBookComponent}
+    {path: ':id/edit', component:EditBookComponent},
+    {path: ':create', component:CreateBookComponent, pathMatch: 'full'}
   ]}
+  // {path: 'books/create', redirectTo: 'books/create', pathMatch: 'full'}
   // Line needed to use with snapshots and observables (without children)
   // {path: 'books/:id', component:BookComponent}
 ];

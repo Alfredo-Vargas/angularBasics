@@ -19,7 +19,6 @@ export class EditBookComponent implements OnInit {
     this.route.paramMap.subscribe((params: Params)=> {
       this.book = this.booksService.getBook(+params.get('id'));
     });
-    // this.book = this.booksService.getBook(index);
   }
 
   set releaseDate(e: any) {

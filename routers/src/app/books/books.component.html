@@ -7,6 +7,7 @@
         *ngFor="let book of books">
         {{ book.title }}
       </a>
+      <button type="submit" class="btn btn-light col-xs-12 col-sm-4" (click)="onCreateBook()">Add book</button>
     </div>
   </div>
   <div class="col-xs-12 col-sm-4">
@@ -16,6 +17,5 @@
     <!-- <app-edit-book></app-edit-book> -->
     <!-- <hr /> -->
     <!-- <app-create-book></app-create-book> -->
-
+  </div>
 </div>
-
