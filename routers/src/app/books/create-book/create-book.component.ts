@@ -19,11 +19,6 @@ export class CreateBookComponent implements OnInit {
   ngOnInit(): void {
     this.book = new Book();
     console.log("ngOnInit create-book was called");
-
-    this.route.paramMap.subscribe((params: Params)=> {
-      this.book = this.booksService.getBook(+params.get('id'));
-    });
-
   }
 
   set releaseDate(e: any) {

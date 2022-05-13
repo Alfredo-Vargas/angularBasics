@@ -15,16 +15,16 @@ import { SummaryPipe } from './summary.pipe';
 import { RouterModule, Routes } from '@angular/router';
 
 // Added Routes
+// Observation:
+// (1) Static routes have no semicolon
+// (2) Dynamic routes have semicolon and therefore are also dynamic (the Server Component can request the dynamic parameter)
 const routes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'books', component:BooksComponent, children: [
+    {path: 'create', component:CreateBookComponent},
     {path: ':id', component:BookComponent},
-    {path: ':id/edit', component:EditBookComponent},
-    {path: ':create', component:CreateBookComponent, pathMatch: 'full'}
+    {path: ':id/edit', component:EditBookComponent}
   ]}
-  // {path: 'books/create', redirectTo: 'books/create', pathMatch: 'full'}
-  // Line needed to use with snapshots and observables (without children)
-  // {path: 'books/:id', component:BookComponent}
 ];
 
 @NgModule({
