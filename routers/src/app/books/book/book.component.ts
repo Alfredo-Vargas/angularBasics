@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { BooksService } from '../books.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Book } from 'src/app/book.model';
@@ -38,14 +37,18 @@ export class BookComponent implements OnInit {
   }
 
   onNextBook(): void {
-    this.router.navigate(['books']);
+    // this.router.navigate(['books']);
     // let bookId = this.route.snapshot.params.id;
     // console.log(bookId);
 
-    console.log(this.book.id);
     this.nextId = +this.book.id == this.booksService.getBooks().length ? 1 : +this.book.id + 1;
-    console.log(this.nextId);
-    this.book = this.booksService.getBook(this.nextId);
+    // the line below does not sync with string interpolation
+    // this.book = this.booksService.getBook(this.nextId);
+    this.router.navigate(['books', this.nextId]);
   }
 
+  onEditBook(): void {
+    console.log(this.book.id);
+    this.router.navigate(['edit'], {relativeTo: this.route} );
+  }
 }

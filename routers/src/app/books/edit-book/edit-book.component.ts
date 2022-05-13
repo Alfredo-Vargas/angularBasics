@@ -12,10 +12,14 @@ import { Book } from 'src/app/book.model';
 export class EditBookComponent implements OnInit {
   book: Book;
 
-  constructor(private booksService: BooksService) { }
+  constructor(private booksService: BooksService,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.book = this.booksService.getBook(1);
+    this.route.paramMap.subscribe((params: Params)=> {
+      this.book = this.booksService.getBook(+params.get('id'));
+    });
+    // this.book = this.booksService.getBook(index);
   }
 
   set releaseDate(e: any) {

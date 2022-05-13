@@ -17,8 +17,12 @@ import { RouterModule, Routes } from '@angular/router';
 // Added Routes
 const routes: Routes = [
   {path: '', component:HomeComponent},
-  {path: 'books', component:BooksComponent},
-  {path: 'books/:id', component:BookComponent}
+  {path: 'books', component:BooksComponent, children: [
+    {path: ':id', component:BookComponent},
+    {path: ':id/edit', component:EditBookComponent}
+  ]}
+  // Line needed to use with snapshots and observables (without children)
+  // {path: 'books/:id', component:BookComponent}
 ];
 
 @NgModule({
