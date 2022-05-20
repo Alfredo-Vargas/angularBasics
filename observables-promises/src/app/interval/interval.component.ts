@@ -15,7 +15,6 @@ export class IntervalComponent implements OnInit {
   constructor(private intervalService: IntervalService) { }
 
   ngOnInit(): void {
-
     this.numberObsSubscription = this.intervalService.plusOneEveryTwoSeconds.subscribe(
       (numberValue: number) => {
         this.numberToChange = numberValue;
