@@ -8,6 +8,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { IntervalComponent } from './interval/interval.component';
 import { TimerComponent } from './timer/timer.component';
 
+import { FormsModule } from '@angular/forms';
+
 const appRoutes: Routes = [
   { path: '', redirectTo: '/interval', pathMatch: 'full' },
   { path: 'interval', component: IntervalComponent},
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,9 @@
 <h1>Assignment 3: Timer and Subjects </h1>
 <label for="time-given">Time (min 1, max 20):</label>
-<input type="number" id="time-given" min="1" max="20" [(ngModel)]="givenDuration">
+<input type="number" id="time-given" min="1" max="20" [(ngModel)]="timeInterval">
 <button type="submit" class="btn btn-light" (click)="onStartTimer()">Start Timer</button>
+<p>The start time is : {{startTime}}</p>
+<p>The end time is: {{endTime}}</p>
 <p>The current time is: {{currentTime}}</p>
+<p>The time interval given is: {{timeInterval}}</p>
 
